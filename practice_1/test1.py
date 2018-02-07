@@ -69,7 +69,6 @@ def rock_paper_scissors():
     player1 = int(getpass("Player 1 choose your option"))
     # player2 = int(input("Player 2 choose your option"))
     player2 = int(getpass("Player 2 choose your option"))
-    print("Rock "+str(player1+1 % 4)+ " scissors "+str(player2+1 % 4))
     if (player1+1) % 4 > (player2+1) % 4:
         print("Player 1 wins")
     elif (player1+1) % 4 < (player2 + 1) % 4:
@@ -78,6 +77,5 @@ def rock_paper_scissors():
         print("draw")
 rock_paper_scissors()
 
-print(3+1 % 4)
 
 
