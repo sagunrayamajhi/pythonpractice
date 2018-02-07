@@ -1,3 +1,5 @@
+from getpass import getpass
+
 def first():
     i = int(input("Number:"))
     listexample = [1, 2, 3, 4, 5, 6, 7]
@@ -56,6 +58,26 @@ def comprehenssion():
     print(list(filter(lambda x: x % 2 == 0, a)))
 
 
-comprehenssion()
+def rock_paper_scissors():
+    check = 1 ;
+    rock = 1;
+    paper=2;
+    scissors=3;
+    # while check == 1:
+    print("1. Rock \n 2. Paper \n 3. Scissors")
+    # player1 = int(input("Player 1 choose your option"))
+    player1 = int(getpass("Player 1 choose your option"))
+    # player2 = int(input("Player 2 choose your option"))
+    player2 = int(getpass("Player 2 choose your option"))
+    print("Rock "+str(player1+1 % 4)+ " scissors "+str(player2+1 % 4))
+    if (player1+1) % 4 > (player2+1) % 4:
+        print("Player 1 wins")
+    elif (player1+1) % 4 < (player2 + 1) % 4:
+        print("Player 2 wins")
+    else:
+        print("draw")
+rock_paper_scissors()
+
+print(3+1 % 4)
 
 
