@@ -75,7 +75,75 @@ def rock_paper_scissors():
         print("Player 2 wins")
     else:
         print("draw")
-rock_paper_scissors()
+
+def fileExtension():
+    fileName = input("Enter file name")
+    if("." in fileName ):
+        ext = fileName.split(".")[-1]
+        print(ext)
+    else:
+        print("Not a valid file")
+
+def getFirstandLastValue():
+    a = ["a", "b", "c"]
+    print(a[0] +"\t" + a[-1])
+
+def examDate():
+    exam_st_date = (11, 12, 2014)
+    val = 0
+    for i in exam_st_date:
+        if (not len(exam_st_date) == val) :
+            print(str(i)+"/", end="")
+        else:
+            print(str(i))
+
+def pract():
+    list1 = ['a', 'b', 'c']
+    tup = (1,2,3,4)
+    for index,value in enumerate(tup, start=5):
+        print(value,index)
+
+def dict_test():
+    subject = {"name": "ABC", "Age": 21, "Smoker": True}
+    pp= pprint.PrettyPrinter(indent=4)
+    pp.pprint(subject)
+
+contact={
+    "ABC":'1234',
+    "CDE":'23434'
+}
+
+def getContact():
+    print(contact.get(input("Enter name"),"NOT FOUND"))
+
+
+def choice1():
+    print("Choice 1")
+
+def choice2():
+    print("Choice 2")
+
+def default():
+    print("DEFAULT")
+
+
+opt = {
+    "1": choice1,
+    "2": choice2
+}
+
+
+def dictTest():
+    inp = input("Enter value")
+    opt.get(inp,default)()
+
+
+def testDefArgm(val1 = "Hello", val2 = "World"):
+    print(val1+" "+val2)
+
+
+testDefArgm()
+testDefArgm("Goodbye")
 
 
 
