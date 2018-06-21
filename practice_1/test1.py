@@ -142,8 +142,89 @@ def testDefArgm(val1 = "Hello", val2 = "World"):
     print(val1+" "+val2)
 
 
-testDefArgm()
-testDefArgm("Goodbye")
+def decending():
+    li = [3, 1, 2, 6, 7, 8, 9]
+    li.sort(reverse=True)
+    print(li)
+
+def multidimension():
+    mylist = [[1, 2, 3], [4, 5, 6, 7], [8, 9, 10]]
+    for list in mylist:
+        for innerlist in list:
+            if int(innerlist) % 2 == 1:
+                print(innerlist)
+
+def Salary():
+    salary = [15000, 20000, 17000, 18900, 30000]
+    new_salary=[]
+    for value in salary:
+        new_salary.append(value + 23*value/100)
+
+    print(new_salary)
+
+def maxMin():
+    my_list = [4, 2, 4, 2, 4, 5, 7, 8, 9, 23, 8, 5, 4, 2, 2, 34, 4, 45]
+    maxm = minm = my_list[0]
+    for val in my_list:
+
+        if maxm < val:
+            maxm = val
+        if minm > val:
+            minm = val
+    print("Minimum: "+ str(maxm) +" Maximum: " + str(minm))
+
+def makeCube(list_tobe_cubed):
+    cubes=[]
+    for each in list_tobe_cubed:
+        cubes.append(each**3)
+    return cubes
+
+arbitary_list = [1, 2, 4, 4, 3, 5, 6]
+#print(makeCube(arbitary_list))
+
+def slopeintercept(list):
+    m = int(input("Enter value of m"))
+    c = int(input("Enter value of c"))
+    for val in list:
+        out = str(m*int(val) + c)
+        print(out)
 
 
+#slopeintercept(arbitary_list)
+
+##Write a function that prompts user to input his/her full name.
+# After user enter's his/her full name, split it and store it in variables first_name and last_name.
+# (hint: use string's split method. Also handle condition for his/her middle name as well)
+
+def namesplit(name):
+    print(type(name.split(" ")))
+    if(len(name.split(" ")) ==2):
+        first = name.split(" ")[0]
+        last = name.split(" ")[1]
+        print("First name: {}".format(first))
+        print("Last name :" + last)
+    elif(len(name.split(" ")) ==3):
+        first = name.split(" ")[0]
+        middle = name.split(" ")[1]
+        last = name.split(" ")[2]
+        print("First name :" + first)
+        print("Middle name :" + middle)
+        print("Last name :" + last)
+    else:
+        print("Invalid name")
+
+namesplit("Ram KC")
+
+def sum(num1,num2):
+    total = num1 + num2
+    print("{}+{}={}".format(num1,num2,total))
+
+
+#print(sum(1,2))
+
+##Write a program to generate following output.
+#>>> What's your name?
+#Nice to meet you ! ****
+#>>> Your age?
+#So, you are already **** years old, ****!
 
